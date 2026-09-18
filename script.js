@@ -51,29 +51,34 @@ function animateParticles() {
 }
 animateParticles();
 
-// 2. Mobile Navigation Hamburger Menu Logic
+// 2. Mobile Navigation Toggle Logic
 const mobileToggle = document.getElementById('mobile-toggle');
 const navCapsule = document.getElementById('nav-capsule');
+const menuIcon = document.getElementById('menu-icon');
 const navItems = document.querySelectorAll('.nav-item');
 
 if (mobileToggle) {
-    mobileToggle.addEventListener('click', () => {
+    mobileToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
         navCapsule.classList.toggle('mobile-active');
-        const icon = mobileToggle.querySelector('i');
+        
         if (navCapsule.classList.contains('mobile-active')) {
-            icon.className = 'fa-solid fa-xmark';
+            menuIcon.className = 'fa-solid fa-xmark';
+            menuIcon.textContent = '✕';
         } else {
-            icon.className = 'fa-solid fa-bars';
+            menuIcon.className = 'fa-solid fa-bars';
+            menuIcon.textContent = '☰';
         }
     });
 }
 
-// Close Mobile Menu on item click
+// Close Mobile Menu when clicking any nav item
 navItems.forEach(item => {
     item.addEventListener('click', () => {
         if (navCapsule.classList.contains('mobile-active')) {
             navCapsule.classList.remove('mobile-active');
-            mobileToggle.querySelector('i').className = 'fa-solid fa-bars';
+            menuIcon.className = 'fa-solid fa-bars';
+            menuIcon.textContent = '☰';
         }
     });
 });
