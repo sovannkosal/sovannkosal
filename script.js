@@ -51,7 +51,34 @@ function animateParticles() {
 }
 animateParticles();
 
-// 2. Typewriter Effect
+// 2. Mobile Navigation Hamburger Menu Logic
+const mobileToggle = document.getElementById('mobile-toggle');
+const navCapsule = document.getElementById('nav-capsule');
+const navItems = document.querySelectorAll('.nav-item');
+
+if (mobileToggle) {
+    mobileToggle.addEventListener('click', () => {
+        navCapsule.classList.toggle('mobile-active');
+        const icon = mobileToggle.querySelector('i');
+        if (navCapsule.classList.contains('mobile-active')) {
+            icon.className = 'fa-solid fa-xmark';
+        } else {
+            icon.className = 'fa-solid fa-bars';
+        }
+    });
+}
+
+// Close Mobile Menu on item click
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        if (navCapsule.classList.contains('mobile-active')) {
+            navCapsule.classList.remove('mobile-active');
+            mobileToggle.querySelector('i').className = 'fa-solid fa-bars';
+        }
+    });
+});
+
+// 3. Typewriter Effect
 const words = ["Flutter Mobile Developer", "Front-End Developer", "Laravel API Specialist"];
 let wordIdx = 0;
 let charIdx = 0;
@@ -85,7 +112,7 @@ function type() {
 
 document.addEventListener('DOMContentLoaded', type);
 
-// 3. Scroll Reveal Animation
+// 4. Scroll Reveal Animation
 const reveals = document.querySelectorAll('.reveal');
 
 function revealOnScroll() {
@@ -101,7 +128,7 @@ function revealOnScroll() {
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll();
 
-// 4. Interactive Console Drawer Logic
+// 5. Interactive Console Drawer Logic
 const consoleDrawer = document.getElementById('console-drawer');
 const toggleConsoleBtn = document.getElementById('toggle-console');
 const closeConsoleBtn = document.getElementById('close-console');
@@ -153,7 +180,7 @@ consoleInput.addEventListener('keydown', (e) => {
     }
 });
 
-// 5. Pop-up Modal Controls (Let's Talk & Hire Me)
+// 6. Pop-up Modal Controls (Let's Talk & Hire Me)
 const openTalkModal = document.getElementById('open-talk-modal');
 const openTalkModalHero = document.getElementById('open-talk-modal-hero');
 const closeTalkModal = document.getElementById('close-talk-modal');
@@ -177,7 +204,7 @@ talkModal.addEventListener('click', (e) => {
     }
 });
 
-// 6. CV Preview Modal Controls
+// 7. CV Preview Modal Controls
 const openCvModal = document.getElementById('open-cv-modal');
 const closeCvModal = document.getElementById('close-cv-modal');
 const cvModal = document.getElementById('cv-modal');

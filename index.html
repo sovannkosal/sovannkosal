@@ -22,13 +22,18 @@
             <span>KOSAL<span class="gradient-text">.DEV</span></span>
         </a>
         
-        <div class="nav-capsule">
+        <!-- Mobile Toggle Button -->
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="nav-capsule" id="nav-capsule">
             <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#" id="toggle-console"><i class="fa-solid fa-terminal"></i> Console</a></li>
+                <li><a href="#about" class="nav-item">About</a></li>
+                <li><a href="#skills" class="nav-item">Skills</a></li>
+                <li><a href="#projects" class="nav-item">Projects</a></li>
+                <li><a href="#education" class="nav-item">Education</a></li>
+                <li><a href="#" id="toggle-console" class="nav-item"><i class="fa-solid fa-terminal"></i> Console</a></li>
             </ul>
         </div>
 
@@ -56,7 +61,7 @@
                     Year 3 Information Technology student at <strong>National Technical Training Institute</strong>. Specialized in building high-performance, responsive web interfaces and mobile applications with Laravel, Flutter, and modern JavaScript.
                 </p>
 
-                <!-- Action Buttons (GitHub Icon Removed) -->
+                <!-- Action Buttons -->
                 <div class="hero-action-group">
                     <a href="#" class="btn-hire" id="open-talk-modal-hero">
                         <i class="fa-paper-plane fa-solid"></i> Hire Me
