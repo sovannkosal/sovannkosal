@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sovann Kosal | Web & Mobile Developer Portfolio</title>
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Particle Canvas Background -->
+    <canvas id="particle-canvas"></canvas>
+    <div class="bg-grid"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <a href="#" class="logo">
+            <div class="logo-icon">SK</div>
+            <span>KOSAL<span class="gradient-text">.DEV</span></span>
+        </a>
+        
+        <div class="nav-capsule">
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#" id="toggle-console"><i class="fa-solid fa-terminal"></i> Console</a></li>
+            </ul>
+        </div>
+
+        <a href="#" class="btn-talk" id="open-talk-modal">Let's Talk <i class="fa-solid fa-arrow-right"></i></a>
+    </nav>
+
+    <!-- Main Container -->
+    <main class="container">
+
+        <!-- Hero Section -->
+        <section id="about" class="hero">
+            <div class="hero-content reveal">
+                <div class="availability-pill">
+                    <span class="pulse-dot"></span>
+                    Available for Entry-Level Roles & Opportunities
+                </div>
+
+                <h1 class="hero-title">SOVANN <span class="gradient-text">KOSAL</span></h1>
+
+                <div class="typewriter-container">
+                    I am a <span id="typewriter" class="typewriter-text"></span><span class="cursor">|</span>
+                </div>
+
+                <p class="hero-desc">
+                    Year 3 Information Technology student at <strong>National Technical Training Institute</strong>. Specialized in building high-performance, responsive web interfaces and mobile applications with Laravel, Flutter, and modern JavaScript.
+                </p>
+
+                <!-- Action Buttons (GitHub Icon Removed) -->
+                <div class="hero-action-group">
+                    <a href="#" class="btn-hire" id="open-talk-modal-hero">
+                        <i class="fa-paper-plane fa-solid"></i> Hire Me
+                    </a>
+                    <a href="#" class="btn-cv" id="open-cv-modal">
+                        <i class="fa-eye fa-solid"></i> Preview CV
+                    </a>
+                </div>
+
+                <!-- Stats Counter Bar -->
+                <div class="stats-bar">
+                    <div class="stat-item">
+                        <div class="stat-number gradient-text">Yr 3</div>
+                        <div class="stat-label">IT Student (NTTI)</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number gradient-text">100%</div>
+                        <div class="stat-label">Dedication</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number gradient-text">Full-Stack</div>
+                        <div class="stat-label">Mobile & Web API</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section -->
+        <section id="skills" class="section">
+            <div class="section-header reveal">
+                <span class="section-tag">// CAPABILITIES</span>
+                <h2 class="section-h2">Tech Stack & Tools</h2>
+            </div>
+
+            <div class="skills-grid">
+                <div class="glass-card reveal">
+                    <div class="skill-icon"><i class="fa-solid fa-code"></i></div>
+                    <h3>Front-End</h3>
+                    <div class="skill-tags">
+                        <span class="tag">HTML5 / CSS3</span>
+                        <span class="tag">Tailwind CSS</span>
+                        <span class="tag">Bootstrap</span>
+                        <span class="tag">JavaScript (ES6+)</span>
+                    </div>
+                </div>
+
+                <div class="glass-card reveal">
+                    <div class="skill-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3>Back-End & Mobile</h3>
+                    <div class="skill-tags">
+                        <span class="tag">PHP / Laravel</span>
+                        <span class="tag">Flutter</span>
+                        <span class="tag">Java (OOP)</span>
+                        <span class="tag">RESTful APIs</span>
+                    </div>
+                </div>
+
+                <div class="glass-card reveal">
+                    <div class="skill-icon"><i class="fa-solid fa-database"></i></div>
+                    <h3>Database & Tools</h3>
+                    <div class="skill-tags">
+                        <span class="tag">MySQL</span>
+                        <span class="tag">SQL Server</span>
+                        <span class="tag">Postman</span>
+                        <span class="tag">Git & GitHub</span>
+                        <span class="tag">VS Code</span>
+                        <span class="tag">Android Studio</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="section-header reveal">
+                <span class="section-tag">// PORTFOLIO WORK</span>
+                <h2 class="section-h2">Featured Training Project</h2>
+            </div>
+
+            <div class="glass-card project-card reveal">
+                <span class="badge-purple">Sala_IT Academy</span>
+                <h3>Full Stack Mobile App Development</h3>
+                <p>Designed and built end-to-end full stack application linking Flutter front-end interfaces with a Laravel RESTful API backend for dynamic data flow and database management.</p>
+                
+                <div class="tech-pills">
+                    <span class="pill">Flutter</span>
+                    <span class="pill">Laravel</span>
+                    <span class="pill">REST API</span>
+                    <span class="pill">Postman</span>
+                    <span class="pill">MySQL</span>
+                </div>
+
+                <ul class="project-bullets">
+                    <li>Integrated Flutter UI with Laravel REST APIs for dynamic authentication and database CRUD.</li>
+                    <li>Performed thorough API endpoint testing and JSON payload verification using Postman.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <div class="section-header reveal">
+                <span class="section-tag">// ACADEMIC HISTORY</span>
+                <h2 class="section-h2">Education Timeline</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card">
+                        <span class="timeline-date">Present (Year 3)</span>
+                        <h3>National Technical Training Institute (NTTI)</h3>
+                        <p>Bachelor of Information Technology</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="glass-card">
+                        <span class="timeline-date">2019</span>
+                        <h3>Traeng Troyeung High School</h3>
+                        <p>Bac II Certificate</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="section-header reveal">
+                <span class="section-tag">// GET IN TOUCH</span>
+                <h2 class="section-h2">Contact Information</h2>
+            </div>
+
+            <div class="contact-grid">
+                <div class="glass-card contact-box reveal">
+                    <i class="fa-solid fa-phone contact-icon"></i>
+                    <h4>Phone</h4>
+                    <p>+855 96 653 0377</p>
+                </div>
+
+                <div class="glass-card contact-box reveal">
+                    <i class="fa-solid fa-envelope contact-icon"></i>
+                    <h4>Email</h4>
+                    <p>sovankosal369@gmail.com</p>
+                </div>
+
+                <div class="glass-card contact-box reveal">
+                    <i class="fa-solid fa-location-dot contact-icon"></i>
+                    <h4>Location</h4>
+                    <p>Phnom Penh Tmey, Sensok, Phnom Penh</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Terminal Drawer Overlay -->
+    <div id="console-drawer" class="console-drawer">
+        <div class="console-header">
+            <span><i class="fa-solid fa-terminal"></i> developer_console_v1.0.sh</span>
+            <button id="close-console">&times;</button>
+        </div>
+        <div class="console-body" id="console-output">
+            <p class="sys-msg">Type 'help' or 'info' to run terminal commands...</p>
+        </div>
+        <div class="console-input-row">
+            <span class="prompt">kosal@dev:~$</span>
+            <input type="text" id="console-input" autofocus autocomplete="off">
+        </div>
+    </div>
+
+    <!-- Let's Talk Pop-up Modal -->
+    <div id="talk-modal" class="modal-overlay">
+        <div class="glass-card modal-content">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-paper-plane gradient-text"></i> Let's Talk</h3>
+                <button id="close-talk-modal" class="modal-close">&times;</button>
+            </div>
+            <form id="contact-form" action="https://formsubmit.co/sovankosal369@gmail.com" method="POST">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                
+                <div class="form-group">
+                    <label for="user-name">Your Name</label>
+                    <input type="text" id="user-name" name="name" placeholder="John Doe" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="user-email">Your Email</label>
+                    <input type="email" id="user-email" name="email" placeholder="john@example.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="user-message">Message</label>
+                    <textarea id="user-message" name="message" rows="4" placeholder="Write your message here..." required></textarea>
+                </div>
+                
+                <button type="submit" class="btn-hire btn-full">
+                    <i class="fa-solid fa-paper-plane"></i> Send Message
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- CV Preview Modal -->
+    <div id="cv-modal" class="modal-overlay">
+        <div class="glass-card cv-modal-content">
+            <div class="modal-header">
+                <h3><i class="fa-solid fa-file-pdf gradient-text"></i> Curriculum Vitae</h3>
+                <div class="cv-actions">
+                    <a href="Sovann Kosal Application Junior Web Developer.pdf" download class="btn-cv-download">
+                        <i class="fa-solid fa-download"></i> Download PDF
+                    </a>
+                    <button id="close-cv-modal" class="modal-close">&times;</button>
+                </div>
+            </div>
+            <div class="cv-viewer-container">
+                <iframe src="Sovann Kosal Application Junior Web Developer.pdf" width="100%" height="100%"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Sovann Kosal. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
