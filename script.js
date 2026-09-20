@@ -237,3 +237,28 @@ window.addEventListener('load', () => {
     welcomeScreen.classList.add('fade-out');
   }, 2000);
 });
+// Function to Open Modal
+function openProjectModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Prevent scrolling background
+  }
+}
+
+// Function to Close Modal
+function closeProjectModal(modalId) {
+  const modal = document.getElementById(modalId);
+  if (modal) {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Enable scrolling
+  }
+}
+
+// Close Modal when clicking outside content area
+window.addEventListener('click', (e) => {
+  if (e.target.classList.contains('project-modal')) {
+    e.target.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+});
