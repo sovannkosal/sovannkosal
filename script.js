@@ -228,3 +228,12 @@ cvModal.addEventListener('click', (e) => {
         cvModal.classList.remove('active');
     }
 });
+
+window.addEventListener('load', () => {
+  const welcomeScreen = document.getElementById('welcome-screen');
+  
+  // បង្ហាញ Welcome Screen រយៈពេល ២ វិនាទី រួចបាត់ទៅវិញ
+  setTimeout(() => {
+    welcomeScreen.classList.add('fade-out');
+  }, 2000);
+});

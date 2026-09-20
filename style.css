@@ -100,14 +100,23 @@ body {
 }
 
 .mobile-toggle {
-    display: none;
     background: transparent;
     border: none;
-    color: var(--text-main);
-    font-size: 1.6rem;
+    color: #ffffff;
+    font-size: 1.5rem;
     cursor: pointer;
-    z-index: 1002;
-    padding: 5px 10px;
+    outline: none;
+    display: none; /* <--- កែត្រង់នេះទៅជា none */
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+/* បង្ហាញតែនៅលើ Mobile (អេក្រង់តូចជាង 768px) */
+@media (max-width: 768px) {
+    .mobile-toggle {
+        display: flex; /* <--- កែត្រង់នេះទៅជា flex */
+    }
 }
 
 .nav-capsule {
@@ -768,4 +777,55 @@ footer {
     .hero-title { font-size: 2.8rem; }
     .stats-bar { flex-direction: column; align-items: flex-start; gap: 16px; }
     .stat-divider { display: none; }
+}
+
+#welcome-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f0715; /* ពណ៌ Background ងងឹត */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.8s ease-out, visibility 0.8s;
+}
+
+.welcome-content {
+  text-align: center;
+  color: #ffffff;
+  animation: zoomIn 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+.icons {
+  font-size: 24px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  opacity: 0.8;
+}
+
+.highlight {
+  color: #8a2be2; /* ពណ៌ Purple Glow */
+}
+
+/* Effect ពេលបើកមកដំបូង */
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ថ្នាក់សម្រាប់បាត់រលូន (Fade Out) */
+.fade-out {
+  opacity: 0;
+  visibility: hidden;
 }
