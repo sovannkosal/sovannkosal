@@ -926,3 +926,16 @@ footer {
 .project-card {
     margin-bottom: 30px !important;
 }
+
+/* កែតម្រូវ Tech Pills ឲ្យរៀបស្អាត និងចុះបន្ទាត់លើ Phone */
+.tech-pills {
+    display: flex !important;
+    flex-wrap: wrap !important; /* ឲ្យវា ចុះបន្ទាត់ស្វ័យប្រវត្តិ ពេលហួសប្រវែង Card */
+    gap: 8px !important;       /* បន្ថែមចន្លោះឃ្លាតរវាង Pill នីមួយៗ */
+    margin-bottom: 15px !important;
+}
+
+.pill {
+    white-space: normal !important; /* បើកសិទ្ធិឲ្យចុះបន្ទាត់ */
+    word-break: break-word !important;
+}
