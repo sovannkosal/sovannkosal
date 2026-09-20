@@ -939,3 +939,30 @@ footer {
     white-space: normal !important; /* បើកសិទ្ធិឲ្យចុះបន្ទាត់ */
     word-break: break-word !important;
 }
+/* កែតម្រូវ Fix ដាច់ស្រឡះ មិនឲ្យ Pill លូនចេញក្រៅ Card លើ Phone */
+.tech-pills {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important; /* បង្ខំឲ្យចុះបន្ទាត់ស្វ័យប្រវត្តិ */
+    justify-content: flex-start !important;
+    align-items: center !important;
+    gap: 8px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    margin-bottom: 15px !important;
+    overflow: visible !important;
+}
+
+.tech-pills .pill, 
+.pill {
+    display: inline-block !important;
+    white-space: normal !important; /* បើកសិទ្ធិឲ្យដាច់ពាក្យ/ចុះបន្ទាត់ */
+    word-break: break-word !important;
+    max-width: 100% !important;
+}
+
+.project-card {
+    overflow: hidden !important; /* កុំឲ្យ elements ណាជ្រោយចេញក្រៅ Card */
+    box-sizing: border-box !important;
+}
