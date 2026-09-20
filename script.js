@@ -64,10 +64,10 @@ if (mobileToggle) {
         
         if (navCapsule.classList.contains('mobile-active')) {
             menuIcon.className = 'fa-solid fa-xmark';
-            menuIcon.textContent = '✕';
+            menuIcon.textContent = ''; // លុប Text ចោល ទុកតែ Icon
         } else {
             menuIcon.className = 'fa-solid fa-bars';
-            menuIcon.textContent = '☰';
+            menuIcon.textContent = ''; // លុប Text ចោល ទុកតែ Icon
         }
     });
 }
@@ -78,7 +78,7 @@ navItems.forEach(item => {
         if (navCapsule.classList.contains('mobile-active')) {
             navCapsule.classList.remove('mobile-active');
             menuIcon.className = 'fa-solid fa-bars';
-            menuIcon.textContent = '☰';
+            menuIcon.textContent = ''; // លុប Text ចោល ទុកតែ Icon
         }
     });
 });
